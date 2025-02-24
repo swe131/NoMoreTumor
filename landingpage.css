@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #d0d6dd;
+    font-family: "Manrope", serif;
+}
+
+
+.logo{
+    margin-left: 1%;
+}
+
+
+.navbar{
+    width: 100%;
+    height: 12vh;
+    background:#4187e9;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: sticky;
+}
+
+.nav-content{
+    margin-right: 5%;
+}
+
+.nav-content a{
+    padding-left: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+
+}
+
+.article-container{
+    width: 80%;
+    margin-left: 10%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -75px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h4{
+    color: #ebecf0;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+
+em{
+    font-size: 17px;
+}
+
+h1{
+    color: #094ec6;
+} 
+
+p{
+    font-size: 15px;
+    color: #222223;
+    letter-spacing: 1px;
+    line-height: 150%;
+    font-weight: 550;
+}
+
+h3{
+    font-weight: 900;
+    color: #222223;
+}
+
+#feature{
+    margin-left: 2%;
+}
+
+.homepage{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.right-content img{
+    border-radius: 1rem;
+    width: 500px;
+    height: auto;
+}
+
+.left-content{
+    padding-top: 150px;
+    display: inline-block;
+    justify-content: center;
+}
+
+
+.left-content h3{
+    color: #094ec6;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.btn{
+    display: flex;
+    margin-top: 10%;
+}
+
+.btn button{
+    margin-left: 10px;
+    border: none;
+    background-color: #094ec6;
+    color: white;
+    width: 40%;
+    height: 55px;
+    border-radius: 1rem;
+}
+
+.btn button a {
+    color: white;
+    text-decoration: none;
+    font-size: 100%;
+    font-family: "Manrope", serif;
+    font-weight: 600;
+}
+
+.left-content p{
+    font-weight: bold;
+}
+
+.right-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #094ec6;
+    
+}
+
+.footer img{
+    width: 100px;
+    margin-left: 2%;
+}
+
+.footer p{
+    color: white;
+}
+
+
+.footer a{
+    margin-right: 2%;
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function showForm() {
+            var userType = document.getElementById("userType").value;
+            document.getElementById("patientForm").style.display = "none";
+            document.getElementById("doctorForm").style.display = "none";
+            document.getElementById("adminForm").style.display = "none";
+
+            if (userType === "patient") {
+                document.getElementById("patientForm").style.display = "block";
+            } else if (userType === "doctor") {
+                document.getElementById("doctorForm").style.display = "block";
+            } else if (userType === "admin") {
+                document.getElementById("adminForm").style.display = "block";
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="logincss.css"
+</head>
+<body>
+    <center>
+    <h1>Login</h1>
+    <label for="userType">Select User Type:</label>
+    <select id="userType" onchange="showForm()">
+        <option value="">-- Select --</option>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+        <option value="admin">Super Admin</option>
+    </select>
+    
+    <form id="patientForm" action="./Patients.html" style="display:none;">
+        <h2>Login for Patients</h2>
+        <label for="email">Email:</label>
+        <input type="email" required/><br>
+        <label for="password">Password:</label>
+        <input type="password" required/><br>
+        <button type="submit">Login</button>
+        <p>If you don't have an account, register <a href="./register.html">here</a></p>
+    </form>
+
+    <form id="doctorForm" action="./Doctors.html" style="display:none;">
+        <h2>Login for Doctors</h2>
+        <label for="email">Email:</label>
+        <input type="email" required/><br>
+        <label for="password">Password:</label>
+        <input type="password" required/><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <form id="adminForm" action="./SuperAdmin.html" style="display:none;">
+        <h2>Login for Super Admins</h2>
+        <label for="email">Super Admin ID:</label>
+        <input type="email" required/><br>
+        <label for="password">Password:</label>
+        <input type="password" required/><br>
+        <button type="submit">Login</button>
+    </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,179 @@
+/* 🔹 General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-top: 80px; /* Prevents content from overlapping with navbar */
+    text-align: center;
+}
+
+/* 🔹 Navbar Styling */
+nav {
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 🔹 Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px; /* Logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo h4 {
+    font-size: 22px;
+    margin: 0;
+}
+
+/* 🔹 Navbar Links */
+.nav-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* 🔹 Main Content Styling */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* 🔹 Headings */
+h1, h2, h3 {
+    color: #333;
+}
+
+/* 🔹 Forms & Inputs */
+form {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-top: 20px;
+}
+
+label, select, input, button {
+    font-size: 16px;
+    margin: 10px 0;
+    display: block;
+}
+
+input, select {
+    padding: 8px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #094ec6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #063b94;
+}
+
+/* 🔹 Lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e4e4e4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 🔹 Links */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 🔹 Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 🔹 Fix for Registration Page Header */
+.heading {
+    text-align: center;
+    padding: 20px;
+}
+
+.heading h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-content {
+        margin-top: 10px;
+    }
+
+    .nav-content a {
+        display: block;
+        padding: 10px 0;
+    }
+}

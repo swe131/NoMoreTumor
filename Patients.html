@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Patient Portal</title>
     <link rel="stylesheet" href="common.css">
 </head>
 <body>
@@ -13,22 +13,31 @@
                 <img width="100px" src="./assets/No More Tumor.png" alt="">
                 <h4>No More Tumor</h4>
             </div>
-            
             <div class="nav-content">
-                <a href="#Home">Home</a>&nbsp;&nbsp;
-                <a href="#about-us">About Us</a>&nbsp;&nbsp;
-                <a href="#feature">Features</a>&nbsp;&nbsp;
+                <a href="#Home">Home</a>
+                <a href="#about-us">About Us</a>
+                <a href="#feature">Features</a>
             </div>
         </div>
     </nav>
 
-    <h1>Patients Portal</h1>
-    <label for="file">Upload your file:</label>
-    <input type="file" required/>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Upload</a>
+        <a href="#">View Result</a>
+        <a href="#">Articles</a>
+    </div>
 
-    <br>
-    <button type="submit">Submit</button>
-    <p>Your data will be sent to the doctor for review after submitting.</p>
-   
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Patients Portal</h1>
+        <label for="file">Upload your file:</label>
+        <input type="file" required/>
+        <br>
+        <button type="submit">Submit</button>
+        <p>Your data will be sent to the doctor for review after submitting.</p>
+    </div>
+
 </body>
 </html>

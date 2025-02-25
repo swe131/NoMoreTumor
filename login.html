@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login: No More Tumor</title>
     <script>
         function showForm() {
             var userType = document.getElementById("userType").value;
             document.getElementById("patientForm").style.display = "none";
+            document.getElementById("patient-img").style.display = "none";
             document.getElementById("doctorForm").style.display = "none";
+            document.getElementById("doctor-img").style.display = "none";
             document.getElementById("adminForm").style.display = "none";
+            document.getElementById("admin-img").style.display = "none";
 
             if (userType === "patient") {
                 document.getElementById("patientForm").style.display = "block";
+                document.getElementById("patient-img").style.display = "block";
             } else if (userType === "doctor") {
                 document.getElementById("doctorForm").style.display = "block";
+                document.getElementById("doctor-img").style.display = "block";
             } else if (userType === "admin") {
                 document.getElementById("adminForm").style.display = "block";
+                document.getElementById("admin-img").style.display = "block";
             }
         }
     </script>
@@ -31,12 +37,13 @@
             </div>
             
             <div class="nav-content">
-                <a href="#Home">Home</a>&nbsp;&nbsp;
-                <a href="#about-us">About Us</a>&nbsp;&nbsp;
-                <a href="#feature">Features</a>&nbsp;&nbsp;
+                <a href="./landingpage.html">Home</a>&nbsp;&nbsp;
+                <!-- <a href="#about-us">About Us</a>&nbsp;&nbsp;
+                <a href="#feature">Features</a>&nbsp;&nbsp; -->
             </div>
         </div>
     </nav>
+    <main class="login-content">
     <center>
     <h1>Login</h1>
     <label for="userType">Select User Type:</label>
@@ -46,35 +53,61 @@
         <option value="doctor">Doctor</option>
         <option value="admin">Super Admin</option>
     </select>
+    </center>
     
-    <form id="patientForm" action="./Patients.html" style="display:none;">
+    
+    <center>
+    <section class="login-forms">
+        <div class="patient-image">
+            <img src="./assets/patient1.png" id="patient-img" alt="register GIF" width="100%" height="100%" style="display:none;">
+         </div>
+     <form id="patientForm" action="./Patients.html" style="display:none;">
         <h2>Login for Patients</h2>
         <label for="email">Email:</label>
-        <input type="email" required/><br>
+        <input type="email" required/><br><br>
         <label for="password">Password:</label>
         <input type="password" required/><br>
-        <button type="submit">Login</button>
+        <button type="submit" class="login-btn">Login</button>
         <p>If you don't have an account, register <a href="./register.html">here</a></p>
-    </form>
+     </form>
+    </section>
+</center>
 
+    <center>
+    <section class="login-forms">
+        <div class="image">
+            <img src="./assets/doctor1.png" id="doctor-img" alt="register GIF" width="100%" height="100%" style="display:none;">
+         </div>
     <form id="doctorForm" action="./Doctors.html" style="display:none;">
         <h2>Login for Doctors</h2>
         <label for="email">Email:</label>
-        <input type="email" required/><br>
+        <input type="email" required/><br> <br>
         <label for="password">Password:</label>
         <input type="password" required/><br>
-        <button type="submit">Login</button>
+        <button type="submit" class="login-btn">Login</button>
     </form>
+    </section>
+</center>
 
+    <center>
+    <section class="login-forms">
+        <div class="image">
+            <img src="./assets/admin.jpg" id="admin-img" alt="register GIF" width="100%" height="100%" style="display:none;">
+         </div>
     <form id="adminForm" action="./SuperAdmin.html" style="display:none;">
         <h2>Login for Super Admins</h2>
         <label for="email">Super Admin ID:</label>
-        <input type="email" required/><br>
+        <input type="email" required/><br><br>
         <label for="password">Password:</label>
         <input type="password" required/><br>
-        <button type="submit">Login</button>
+        <button type="submit" class="login-btn">Login</button>
     </form>
+    </section>
     </center>
-   
+</main>
+
+<footer class="foot">
+    <p class="copyrights">&copy Copyrights No More Tumor 2025</p>
+</footer>
 </body>
 </html>

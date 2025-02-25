@@ -3,53 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="common.css">
+    <title>Super Admin Portal</title>
+    <link rel="stylesheet" href="portal.css">
 </head>
 <body>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+    <!-- Navbar -->
     <nav>
         <div class="navbar">
             <div class="logo">
-                <img width="100px" src="./assets/No More Tumor.png" alt="">
+                <img width="50px" src="./assets/No More Tumor.png" alt="Logo">
                 <h4>No More Tumor</h4>
             </div>
-            
             <div class="nav-content">
-                <a href="#Home">Home</a>&nbsp;&nbsp;
-                <a href="#about-us">About Us</a>&nbsp;&nbsp;
-                <a href="#feature">Features</a>&nbsp;&nbsp;
+                <a href="#home">Home</a>
+                <a href="#about-us">About Us</a>
+                <a href="#features">Features</a>
             </div>
         </div>
     </nav>
 
-    <section>
-        <div class="hospitals">
-            <h3>Add Hospitals here</h3>
-            <form >
-            
-            <input type="text"><br>
-            
-            <button type="submit">Add</button>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Manage Hospitals</a></li>
+            <li><a href="#">Manage Doctors</a></li>
+            <li><a href="#">User Analytics</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Super Admin Portal</h1>
+
+        <!-- Add Hospitals Section -->
+        <div class="form-section">
+            <h2>Add Hospitals</h2>
+            <form>
+                <input type="text" placeholder="Enter Hospital Name" required>
+                <button type="submit">Add</button>
             </form>
         </div>
-        <div class="sidebar">
-            <a href="#">Manage Hospitals</a>
-            <a href="#">Manage Doctors</a>
-            <a href="#">User Analytics</a>
-            <a href="#">Settings</a>
+
+        <!-- List of Hospitals -->
+        <div class="list-section">
+            <h2>List of Hospitals</h2>
+            <ul>
+                <li>Hospital 1 <a href="#">View Doctors</a></li>
+                <li>Hospital 2 <a href="#">View Doctors</a></li>
+            </ul>
         </div>
-        
 
-        <ul>List of Hospitals
-            <li>ssdlaw</li><a href="#">List of Doctors</a>
-            <li>sdgwergrq</li><a href="#">List of doctors here</a>
-        </ul>
+        <!-- Add Doctors Section -->
+        <div class="form-section">
+            <h2>Add Doctors</h2>
+            <form>
+                <input type="text" placeholder="Enter Doctor's Name" required>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
 
-        <label>Add Doctors</label>
-        <input type="text">
-        <button type="submit">Add</button>
-    </section>
-
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebar = document.querySelector(".sidebar");
+            const mainContent = document.querySelector(".main-content");
+            const toggleButton = document.querySelector(".sidebar-toggle");
+    
+            toggleButton.addEventListener("click", function () {
+                sidebar.classList.toggle("collapsed");
+                mainContent.classList.toggle("shifted");
+            });
+        });
+    </script>
 </body>
 </html>

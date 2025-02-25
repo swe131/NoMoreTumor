@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-top: 70px;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(26, 26, 46, 0.9); /* Making sidebar slightly transparent */
+    position: fixed;
+    top: 60px;
+    left: 0;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    text-align: left;
+    padding: 12px 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    background: #007BFF;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    z-index: 1100;
+    transition: background 0.3s ease-in-out;
+}
+
+.sidebar-toggle:hover {
+    background: #0056b3;
+}
+
+/* Sidebar Collapsed */
+.sidebar.collapsed {
+    left: -250px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left:200px; /* Increased margin to push content further right */
+    padding: 20px;
+    max-width: calc(100% - 260px);
+    background: white;
+    border-radius: 5px;
+    margin: 80px auto 20px auto;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    transition: margin-left 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ul li{
+    list-style: none;
+}
+/* Adjust main content when sidebar is collapsed */
+.main-content.shifted {
+    margin-left:100px ;
+    margin-right:100px;
+    /*Moves content further right when sidebar is collapsed */
+    max-width: calc(100% - 120px);
+
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Default space when sidebar is open */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+
+
+/* Heading Adjustments */
+h1 {
+    font-size: 22px;
+    color: #333;
+}
+
+h2 {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Input and Buttons */
+input[type="file"] {
+   /* display: block;(*/
+    margin: 10px 0;
+}
+
+/* General Input Styling */
+input[type="text"], input[type="file"], select {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+input:focus, select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Styled Buttons */
+button {
+    background: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

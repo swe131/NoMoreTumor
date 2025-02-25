@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Portal</title>
-    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="portal.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav>
         <div class="navbar">
             <div class="logo">
-                <img width="100px" src="./assets/No More Tumor.png" alt="">
+                <img width="100px" src="./assets/No More Tumor.png" alt="No More Tumor Logo">
                 <h4>No More Tumor</h4>
             </div>
             <div class="nav-content">
-                <a href="#Home">Home</a>
+                <a href="#home">Home</a>
                 <a href="#about-us">About Us</a>
-                <a href="#feature">Features</a>
+                <a href="#features">Features</a>
             </div>
         </div>
     </nav>
 
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
     <!-- Sidebar -->
     <div class="sidebar">
-        <a href="#">Dashboard</a>
-        <a href="#">Upload</a>
-        <a href="#">View Result</a>
-        <a href="#">Articles</a>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Upload</a></li>
+            <li><a href="#">View Result</a></li>
+            <li><a href="#">Articles</a></li>
+        </ul>
     </div>
 
     <!-- Main Content -->
@@ -39,5 +45,22 @@
         <p>Your data will be sent to the doctor for review after submitting.</p>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 No More Tumor. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebar = document.querySelector(".sidebar");
+            const mainContent = document.querySelector(".main-content");
+            const toggleButton = document.querySelector(".sidebar-toggle");
+    
+            toggleButton.addEventListener("click", function () {
+                sidebar.classList.toggle("collapsed");
+                mainContent.classList.toggle("shifted");
+            });
+        });
+    </script>
 </body>
 </html>

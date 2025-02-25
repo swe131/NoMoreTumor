@@ -4,7 +4,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #d0d6dd;
+    background: whitesmoke;
     font-family: "Manrope", serif;
 }
 
@@ -17,7 +17,7 @@ body{
 .navbar{
     width: 100%;
     height: 12vh;
-    background:#4187e9;
+    background: linear-gradient(to right, #014FBD, #4187E9);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -37,19 +37,22 @@ body{
 
 }
 
-.article-container{
-    width: 80%;
-    margin-left: 10%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: -75px;
-}
+/* Navbar */
+
+/* Main content */
+
+
 
 .logo{
     display: flex;
     align-items: center;
+    margin-left: 50px;
+    
+}
+
+.logo img{
+    width: 50px;
+    margin-right: 10px;
 }
 
 .logo h4{
@@ -58,50 +61,61 @@ body{
     font-size: 20px;
 }
 
-
-em{
-    font-size: 17px;
+#about{
+    text-align: center;
+    margin-top: 50px;
+    display: block;
+    align-items: center;
 }
 
-h1{
+.about-container .about-content{
+    font-size: 140%;
     color: #094ec6;
-} 
-
-p{
-    font-size: 15px;
-    color: #222223;
-    letter-spacing: 1px;
-    line-height: 150%;
-    font-weight: 550;
+    font-weight: 600;
+    line-height: 200%;
 }
 
-h3{
-    font-weight: 900;
-    color: #222223;
+.about-title{
+    display: flex;
+    justify-content: center;
+    
 }
 
-#feature{
-    margin-left: 2%;
+#how-it-works{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
 }
+
+.steps{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
 
 .homepage{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
+.right-content{
+    margin-top: 5%;
+}
 .right-content img{
     border-radius: 1rem;
-    width: 500px;
+    width: 400px;
     height: auto;
 }
 
 .left-content{
-    padding-top: 150px;
+    padding-top: 10%;
     display: inline-block;
     justify-content: center;
 }
-
 
 .left-content h3{
     color: #094ec6;
@@ -110,22 +124,48 @@ h3{
     margin: 0;
 }
 
-.btn{
-    display: flex;
-    margin-top: 10%;
+.left-content p{
+    color: black;
+    letter-spacing: 150%;
+    line-height: 170%;
 }
 
-.btn button{
-    margin-left: 10px;
+.btn{
+    display: flex;
+    margin-top: 5%;
+}
+
+.btn .login{
     border: none;
     background-color: #094ec6;
     color: white;
-    width: 40%;
+    width: 30%;
     height: 55px;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
-.btn button a {
+.btn .register{
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    color: #014FBD;
+    border: 3px solid #014FBD;
+    width: 30%;
+    height: 55px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.btn .register a{
+    color: #094ec6;
+    text-decoration: none;
+    font-size: 100%;
+    font-family: "Manrope", serif;
+    font-weight: 600;
+}
+
+.btn .login a {
     color: white;
     text-decoration: none;
     font-size: 100%;
@@ -144,11 +184,13 @@ h3{
     padding: 20px 0;
 }
 
+
 .footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #094ec6;
+    margin-top: 5%;
     
 }
 
@@ -166,4 +208,36 @@ h3{
     margin-right: 2%;
     color: white;
     text-decoration: none;
+}
+
+#features{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.feature{
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.feature img{
+    width: 75px;
+    height: 75px;
+}
+
+.feature h3{
+    color: #094ec6;
+    font-weight: 600;
 }

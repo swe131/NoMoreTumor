@@ -5,12 +5,12 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     padding-top: 80px; /* Prevents content from overlapping with navbar */
-    text-align: center;
+    
 }
 
 /* 🔹 Navbar Styling */
 nav {
-    background-color: #007BFF; /* Blue background */
+    background-color: #094ec6; /* Blue background */
     color: white;
     padding: 15px 20px;
     position: fixed;
@@ -37,7 +37,7 @@ nav {
 .logo img {
     width: 60px; /* Logo size */
     height: auto;
-    margin-right: 10px;
+    
 }
 
 .logo h4 {
@@ -57,65 +57,83 @@ nav {
 .nav-content a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-}
-
-/* 🔹 Sidebar Styling */
-.sidebar {
-    width: 250px;
-    height: 100vh; /* Full height */
-    background-color: #1a1a2e;
-    position: fixed;
-    top: 80px; /* Below navbar */
-    left: 0;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar a {
-    padding: 15px;
     text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
-    transition: 0.3s ease-in-out;
+    font-size: 20px;
+    box-shadow:#fff;
 }
 
-.sidebar a:hover {
-    background-color: #007BFF;
-    border-left: 5px solid white;
-}
-
-/* 🔹 Main Content Styling (Adjusted for Sidebar) */
-.main-content {
-    margin-left: 260px; /* Push content right to avoid overlap */
-    padding: 20px;
+/* 🔹 Main Content Styling */
+.container {
     max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    margin: 20px auto;
 }
 
 /* 🔹 Headings */
 h1, h2, h3 {
     color: #333;
 }
-
+.login-forms{
+  display: inline-flex;
+  background-color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+}
+.image{
+    width: 50%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.forms{
+    display: flex;
+    background-color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.login-forms{
+    background-color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
 /* 🔹 Forms & Inputs */
 form {
     background: white;
     padding: 20px;
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
     display: inline-block;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+}
+label{
+    display: block;
+    font-size: 16px;
+}
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.register1, .register2{
+    padding: 20px;
+    font-size: 16px;
+}
+.image img{
+    border-top-left-radius: 10px;
 }
 
-label, select, input, button {
+
+
+/* label, select, input, button {
     font-size: 16px;
     margin: 10px 0;
     display: block;
@@ -127,11 +145,23 @@ input, select {
     border-radius: 5px;
     border: 1px solid #ccc;
     margin: 10px auto;
+} */
+.accept{
+    color: rgb(120, 119, 119);
+}
+input{
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 3px;
+    height: 24px;
+}
+input:focus{border: 2px solid #007BFF;}
+
+input:hover{
+    border: 2px solid #007BFF;
 }
 
-button {
+.login-btn{
     display: block;
-    margin: 10px auto;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #094ec6;
@@ -139,6 +169,21 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 2%;
+}
+
+.register-btn {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #094ec6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 2%;
+
 }
 
 button:hover {
@@ -190,6 +235,14 @@ footer {
     font-size: 28px;
     color: #333;
 }
+.foot{
+    background-color: #f4f4f4;
+}
+.copyrights{
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
 
 /* 🔹 Responsive Design */
 @media (max-width: 768px) {
@@ -205,26 +258,5 @@ footer {
     .nav-content a {
         display: block;
         padding: 10px 0;
-    }
-
-    /* Make Sidebar Collapsible */
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        top: 0;
-        flex-direction: row;
-        justify-content: center;
-        padding: 10px 0;
-    }
-
-    .sidebar a {
-        padding: 10px;
-        font-size: 16px;
-    }
-
-    /* Reset Content Margin */
-    .main-content {
-        margin-left: 0;
     }
 }
